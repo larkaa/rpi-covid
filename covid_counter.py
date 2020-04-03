@@ -34,7 +34,6 @@ def eink_img(text1,text2):
     #drawred = ImageDraw.Draw(HRedimage)
     drawblack.text((2,10), text1, font=font1)
     drawblack.text((2,105), text2, font=font1)
-    #drawblack.text((2,120), text2)
     
     
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRedimage))
@@ -45,7 +44,7 @@ def time_get(url):
     print("[!] Getting response from URL")
     startTime = time.time()
     res = requests.get(url)
-    #print(res)
+
     print("[!] Time taken to retrieve response", round((time.time() - startTime), 2))
     return res
 
