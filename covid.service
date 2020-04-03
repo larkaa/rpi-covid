@@ -1,0 +1,12 @@
+[Unit]
+Description=Covid Counter
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+WorkingDirectory=/home/pi/Desktop/code/rpi-covid
+ExecStart=/usr/bin/python3 /home/pi/Desktop/code/rpi-covid/covid_counter.py
+User=pi
+
+[Install]
+WantedBy=multi-user.target
