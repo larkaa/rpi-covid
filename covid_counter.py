@@ -74,7 +74,7 @@ def getStats(country):
     soup = BeautifulSoup(response.text, "html.parser")
     soup2 = BeautifulSoup(response2.text, "html.parser")
     
-    # Create empty array called stats
+    # Create empty arrays for stats
     stats = []
     stats_world = []
     
@@ -98,11 +98,7 @@ def getStats(country):
     
 def getStats2(country):
 
-    # Insert your URL here
     url_c = "https://corona.help/country/{}".format(country)
-    # Insert your Population here
-    #population_c = "66990000"
-    #population_w = "7770173166"
     url_w ="https://corona.help/"
     
     page_c = requests.get(url_c)
@@ -124,7 +120,6 @@ def getStats2(country):
     survived_w = soup_w.select('h2')[3].text.strip()
     today_w = soup_w.select('h2')[4].text.strip()
     deaths_t_w = soup_w.select('h2')[5].text.strip()
-
 
     str1 = "Cases in {}\nInfections: {}\nDeaths: {} /Total: {}".format(
                     first, infections_c, deaths_t, deaths_c)
