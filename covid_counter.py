@@ -60,6 +60,7 @@ def search_divs(soup, class_name, pattern, findall=False):
             res.append(test[0])
     return res
 
+# below function largely inspired from https://github.com/julianbruegger/corona-display
 def getStats(country):
     url = "https://www.worldometers.info/coronavirus/country/{}/".format(country)
     url2 = "https://www.worldometers.info/coronavirus/"
